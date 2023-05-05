@@ -1,1 +1,54 @@
-<p>end works!</p>
+<main>
+    <div>
+        <h1> LEVEL : OverWorld</h1>
+
+        <section *ngIf="timeOn">
+            <app-timer></app-timer>
+        </section>
+
+        <section *ngIf="question == 0">
+            <h2> What are endermen afraid of? </h2>
+            <button routerLink="/lose"> lava </button>
+            <button (click)="next()"> water </button>
+            <button (click)="next()"> eye contact </button>
+            <button routerLink="/lose"> daylight </button>
+        </section>
+
+        <section *ngIf="question == 1">
+            <h2> What mob do you fight to beat the game? </h2>
+            <button (click)="next()"> Ender Dragon </button>
+            <button routerLink="/lose"> wither </button>
+            <button routerLink="/lose"> Warden </button>
+            <button routerLink="/lose"> Endermites</button>
+        </section>
+
+        <section *ngIf="question == 2">
+            <h2> How many end crystals do you need to respawn the ender dragon</h2>
+            <button routerLink="/lose"> 6 </button>
+            <button routerLink="/lose"> 5 </button>
+            <button (click)="next()"> 4 </button>
+            <button routerLink="/lose"> 3 </button>
+        </section>
+
+        <section *ngIf="question == 3">
+            <h2> What is the most common block in the end? </h2>
+            <button routerLink="/lose"> sandstone </button>
+            <button routerLink="/lose"> obsidian </button>
+            <button routerLink="/lose"> end crystals </button>
+            <button (click)="next()"> endstone </button>
+        </section>
+
+        <section *ngIf="question == 4">
+            <h2> What can you get from the end that allows you to fly? </h2>
+            <button routerLink="/lose"> jet pack </button>
+            <button routerLink="/lose"> hoverboard </button>
+            <button routerLink="/lose"> dragon wings </button>
+            <button (click)="nextLevel()"> Elytra </button>
+        </section>
+
+        <section *ngIf="question == 5">
+
+        </section>
+
+    </div>
+</main>

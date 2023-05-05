@@ -10,6 +10,8 @@ import { EndComponent } from './end/end.component';
 import { WinComponent } from './win/win.component';
 import { LoseComponent } from './lose/lose.component';
 import { ScoreComponent } from './score/score.component';
+import { TimerComponent } from './timer/timer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { ScoreComponent } from './score/score.component';
     EndComponent,
     WinComponent,
     LoseComponent,
-    ScoreComponent
+    ScoreComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

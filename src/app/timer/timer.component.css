@@ -1,0 +1,7 @@
+p {
+    background-color: hsl(0, 0%, 0%);
+    color: beige;
+    border-radius: 900px;
+    width: fit-content;
+    padding: 1%;
+}

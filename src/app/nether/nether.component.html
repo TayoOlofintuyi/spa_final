@@ -1,1 +1,54 @@
-<p>nether works!</p>
+<main>
+    <div>
+        <h1> LEVEL : OverWorld</h1>
+
+        <section *ngIf="timeOn">
+            <app-timer></app-timer>
+        </section>
+
+        <section *ngIf="question == 0">
+            <h2> What Y level is best for finding ancient debris?</h2>
+            <button routerLink="/lose"> 4 </button>
+            <button (click)="next()"> 15 </button>
+            <button routerLink="/lose"> 9 </button>
+            <button routerLink="/lose"> 12</button>
+        </section>
+
+        <section *ngIf="question == 1">
+            <h2> Which nether mob allows for trading?</h2>
+            <button (click)="next()"> piglen </button>
+            <button routerLink="/lose"> zombie piglin </button>
+            <button routerLink="/lose"> blaze </button>
+            <button routerLink="/lose"> hoglins </button>
+        </section>
+
+        <section *ngIf="question == 2">
+            <h2> Where would you find the most gold in the nether</h2>
+            <button routerLink="/lose"> nether fortress </button>
+            <button routerLink="/lose"> underground </button>
+            <button (click)="next()"> bastion </button>
+            <button routerLink="/lose"> under lava</button>
+        </section>
+
+        <section *ngIf="question == 3">
+            <h2> Who created the song Pigstep?</h2>
+            <button routerLink="/lose"> Hideo Kojima </button>
+            <button routerLink="/lose"> Markus "Notch" Persson</button>
+            <button routerLink="/lose"> C418 </button>
+            <button (click)="next()"> Lena Raine </button>
+        </section>
+
+        <section *ngIf="question == 4">
+            <h2> What are the dimensions of the biggest possible nether portal? </h2>
+            <button routerLink="/lose"> 2 by 3 </button>
+            <button routerLink="/lose"> 32 by 32 </button>
+            <button routerLink="/lose"> 64 by 64 </button>
+            <button (click)="nextLevel()"> 23 by 23 </button>
+        </section>
+
+        <section *ngIf="question == 5">
+
+        </section>
+
+    </div>
+</main>

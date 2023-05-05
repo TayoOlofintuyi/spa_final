@@ -1,1 +1,54 @@
-<p>overworld works!</p>
+<main>
+    <div>
+        <h1> LEVEL : OverWorld</h1>
+
+        <section *ngIf="timeOn">
+            <app-timer></app-timer>
+        </section>
+
+        <section *ngIf="question == 0">
+            <h2> What type of food do cows and sheep eat?</h2>
+            <button routerLink="/lose"> Carrots </button>
+            <button (click)="next()"> Wheat </button>
+            <button routerLink="/lose"> Beetroot </button>
+            <button routerLink="/lose"> Potatoes</button>
+        </section>
+
+        <section *ngIf="question == 1">
+            <h2> In which biome can you find pandas?</h2>
+            <button (click)="next()"> Jungle </button>
+            <button routerLink="/lose"> Dark Oak </button>
+            <button routerLink="/lose"> Birchwood forest </button>
+            <button routerLink="/lose"> flower biomes</button>
+        </section>
+
+        <section *ngIf="question == 2">
+            <h2> What happens when a skeleton kills a creeper?</h2>
+            <button routerLink="/lose"> gun powder drops </button>
+            <button routerLink="/lose"> arrows drop </button>
+            <button (click)="next()"> A music disc drops </button>
+            <button routerLink="/lose"> a diamond drops</button>
+        </section>
+
+        <section *ngIf="question == 3">
+            <h2> Which of these blocks age over time?</h2>
+            <button routerLink="/lose"> dirt </button>
+            <button routerLink="/lose"> stone </button>
+            <button routerLink="/lose"> honey </button>
+            <button (click)="next()"> copper </button>
+        </section>
+
+        <section *ngIf="question == 4">
+            <h2> How many colors do Minecraft Axolotls come in?</h2>
+            <button routerLink="/lose"> 4 </button>
+            <button routerLink="/lose"> 6 </button>
+            <button routerLink="/lose"> 7 </button>
+            <button (click)="nextLevel()"> 5 </button>
+        </section>
+
+        <section *ngIf="question == 5">
+
+        </section>
+
+    </div>
+</main>
