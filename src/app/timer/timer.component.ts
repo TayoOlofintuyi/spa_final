@@ -16,7 +16,6 @@ export class TimerComponent {
   stopped: boolean = false;
 
   constructor(private router: Router, private activeRoute : ActivatedRoute) {}
-
     ngOnInit()
     {
       this.startTimer();
@@ -29,7 +28,6 @@ export class TimerComponent {
         this.subscribeTimer = this.timeLeft - val;
       });
     }
-  
     startTimer() {
       this.interval = setInterval(() => {
         if(this.timeLeft > 0) {
@@ -38,18 +36,16 @@ export class TimerComponent {
           this.pauseTimer;
           this.ints = 1000000000;
           this.stopped = true;
-          this.router.navigate(['/lose'], {relativeTo: this.activeRoute});  
+          this.router.navigate(['/lose'], 
+          {relativeTo: this.activeRoute});  
         }
       },this.ints)
     }
-  
     pauseTimer() {
       clearInterval(this.interval);
     }
-
     setTimeLeft(tl : number) {
       this.timeLeft = tl;
     }
-
   }
 
